@@ -1,7 +1,11 @@
-import otherSquare, { add, name } from './utilities'
-import otherScream from './scream'
+import lottie from 'lottie-web';
 
-console.log('index.js')
-console.log(add(32, 4))
-console.log(otherScream(name))
-console.log(otherSquare(10))
+const container = document.getElementById('svg-container');
+
+lottie.loadAnimation({
+    container, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../JSON/LOTTIE_TEST_01.json' // the path to the animation json
+});
